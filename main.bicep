@@ -4,7 +4,7 @@ targetScope = 'subscription'
 
 // Deploy the resource group module
 module rgModule 'local_modules/resourceGroup.bicep' = {
-  name: 'deployResourceGroup'
+  name: '${deployment().name}-resourceGroupDeploy'
   params: {
     resourceGroupName: 'rg-test-bicep-03'
     location: 'westeurope'
@@ -13,10 +13,10 @@ module rgModule 'local_modules/resourceGroup.bicep' = {
 
 // Define the storage account module (to be deployed at resource group scope)
 module storageModule 'local_modules/storageAccount.bicep' = {
-  name: 'deployStorageAccount'
+  name: '${deployment().name}-storageDeploy'
   scope: resourceGroup('rg-test-bicep-03')
   params: {
-    storageAccountName: 'st089vikiscripts'
+    storageAccountName: 'st386vikiscripts'
     location: 'westeurope'
   }
   dependsOn: [
