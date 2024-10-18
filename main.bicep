@@ -19,6 +19,9 @@ module storageModule 'local_modules/storageAccount.bicep' = {
     storageAccountName: 'st089vikiscripts'
     location: 'westeurope'
   }
+  dependsOn: [
+    rgModule
+  ]
 }
 
 // Output the resource group ID
