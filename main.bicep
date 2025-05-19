@@ -5,9 +5,8 @@ targetScope = 'subscription'
 var deploymentRegion = 'westeurope'
 
 var resourceGroupNames = [
-  'd-viki-we-rg-iaas1'
-  'd-viki-we-rg-network1'
-  'd-viki-we-rg-paas1'
+  'RG_WE_EMPCUSTOM1.0'
+  'RG_WE_EMPCUSTOM1.1'
 ]
 
 // main deployments
